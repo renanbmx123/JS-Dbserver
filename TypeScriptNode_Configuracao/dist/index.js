@@ -1,4 +1,4 @@
 "use strict";
-let saudacao = 'Alô, mundo!';
+let saudacao = 'Aló, mundo!';
 console.log(saudacao);
 //# sourceMappingURL=index.js.map

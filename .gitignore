@@ -1,1 +1,2 @@
-TypeScriptNode_Configuracao\node_modules*
+.TypeScriptNode_Configuracao/node_modules/
+.TypeScrip_Funcoes/node_modules/

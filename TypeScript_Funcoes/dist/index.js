@@ -31,4 +31,8 @@ function multiplicar(fator) {
     return (numero => numero * fator);
 }
 console.log(multiplicar(3)(2));
+let palavras = ['a', 'b'];
+console.log(palavras.pop());
+console.log(palavras.pop());
+console.log(palavras.pop());
 //# sourceMappingURL=index.js.map

@@ -1,8 +1,8 @@
 "use strict";
 let mapa;
 mapa = new Map();
-mapa.set("RS", "Rio Grande Do Sul");
-mapa.set("SC", "Santa Catarina");
+mapa.set("PR", "Parana");
+mapa.set("AC", "Acre");
 console.log(mapa.size);
 for (let entrada of mapa) {
     console.log(entrada[0]);

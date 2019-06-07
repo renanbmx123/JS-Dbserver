@@ -87,6 +87,54 @@
 // let prod2 = new ProdutoPerecivel("prod2",1.99,new Date(2019,11,20));
 // console.log(prod2);
 // console.log(prod2.toString());
+/*
+abstract class FiguraBidimensional{
+  constructor(
+    private _centrox:number,
+    private _centroy:number
+  ){}
+
+  get x():number{
+    return this._centrox;
+  }
+  get y():number{
+    return this._centroy;
+  }
+  abstract area():number;
+}
+
+class Circulo extends FiguraBidimensional{
+  constructor(
+    centrox:number,
+    centroy:number,
+    private _raio:number){
+      super(centrox,centroy);
+    }
+    area(): number{
+      return Math.PI * this._raio **2;
+    }
+    get raio():number{
+      return this._raio;
+    }
+}
+
+let fig1:FiguraBidimensional = new Circulo(1,1,3);
+console.log(fig1);
+console.log(fig1.area());
+console.log(fig1.x);
+console.log((<Circulo>fig1).raio);
+
+interface Desenhavel{
+  x:number,
+  y:number
+}
+
+function desenhar(d:Desenhavel){
+  console.log(`x=${d.x} y=${d.y}`);
+}
+
+desenhar(fig1);
+*/
 
 interface Predicado<T>{
   (item:T):boolean;

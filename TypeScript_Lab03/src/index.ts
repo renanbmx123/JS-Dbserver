@@ -66,8 +66,3 @@ cofre.adicionar(new Moeda(0.10,'10 centavos'));
 console.log(cofre.calcularTotal());
 let cofre2 = new Cofrinho();
 console.log(cofre2.calcularTotal());
-
-
-/*2
-**
-.*/

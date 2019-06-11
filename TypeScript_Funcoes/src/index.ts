@@ -1,5 +1,3 @@
-import { setFlagsFromString } from "v8";
-
 function area(r: number): number{
     return (Math.PI*potencia(2));
 }

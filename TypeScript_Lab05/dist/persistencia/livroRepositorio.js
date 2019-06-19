@@ -8,32 +8,30 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const livroModel_1 = require("./livroModel");
 const autorModel_1 = require("./autorModel");
-class AutorRepositorio {
-    static criar(autor) {
+class LivroRepositorio {
+    static criar(livro) {
         return __awaiter(this, void 0, void 0, function* () {
-            let novoAutor = yield autorModel_1.AutorModel.create(autor);
-            return novoAutor;
+            return livroModel_1.LivroModel.create(livro);
         });
     }
     static buscar() {
         return __awaiter(this, void 0, void 0, function* () {
-            let consulta = autorModel_1.AutorModel.find();
-            return consulta.exec();
+            //return LivroModel.find().populate({path:'autores', model:AutorModel}).exec();
+            return livroModel_1.LivroModel.find().populate('autores', autorModel_1.AutorModel).exec();
         });
     }
-    static buscarPorPrimeiroNome(nome) {
+    static buscarPorAutor(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            let consulta = autorModel_1.AutorModel.find().where('primeiro_nome').equals(nome);
-            return consulta.exec();
+            return livroModel_1.LivroModel.where('autores').equals(id).populate('autores', autorModel_1.AutorModel).exec();
         });
     }
-    static buscarPorUltimoNome(nome) {
+    static buscarPorId(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            let consulta = autorModel_1.AutorModel.find().where('ultimo_nome').equals(nome);
-            return consulta.exec();
+            return livroModel_1.LivroModel.findById(id).exec();
         });
     }
 }
-exports.AutorRepositorio = AutorRepositorio;
-//# sourceMappingURL=autorRepositorio.js.map
+exports.LivroRepositorio = LivroRepositorio;
+//# sourceMappingURL=livroRepositorio.js.map

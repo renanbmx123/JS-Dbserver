@@ -1,6 +1,5 @@
 import { Autor } from "../entidades/autor";
-import { AutorModel, AutorDocument } from "./autorModel";
-import { Query } from "mongoose";
+import { AutorModel } from "./autorModel";
 
 export class AutorRepositorio {
     static async criar(autor: Autor): Promise<Autor> {
@@ -23,7 +22,5 @@ export class AutorRepositorio {
         return consulta.exec();
     }
 
-    static async alterar(autor:Autor): Promise<Autor> {
-        let autorAlterado = AutorModel
-    }
+    
 }

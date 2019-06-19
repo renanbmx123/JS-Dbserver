@@ -55,7 +55,7 @@ async function main() {
         */
 
         console.log('Realizar empréstimos...');
-        const emprestimo = await emprestarLivro('5d03dec2ebc5d65f8df202d3');
+        const emprestimo = await emprestarLivro('5d03dec2ebc5d65f8df202d3\');
         console.log(emprestimo);
 
         if (cliente && cliente.connection) {
